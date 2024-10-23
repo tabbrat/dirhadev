@@ -1,0 +1,121 @@
+/*
+ Theme Name:   Astra Child
+ Theme URI:    https://example.com/astra-child
+ Description:  Thème enfant du thème Astra
+ Author:       Bouirou
+ Author URI:   http://dirhadev.whf.bz/
+ Template:     astra
+ Version:      1.0.0
+ Text Domain:  astra-child
+*/
+
+/* Ajout ici - CSS personnalisé pour le thème enfant */
+
+.entry-meta, 
+.entry-date, 
+.published, 
+.posted-on {
+    display: none !important;
+}
+#respond,#comments {
+	display: none !important;
+}
+
+.nav-previous ,#main > nav{
+	display: none !important;
+}
+
+#post-55 > div > div > div > div > div > div {
+	background-color: #C9C9C9;
+}
+
+#wpcf7-f36-p8-o1 > form > p:nth-child(8) {
+text-align: center;
+margin-left: 35%;
+margin-right: 35%;
+}
+
+#post-8 > div > div > div.elementor-element
+.elementor-element-02e606e.e-flex.e-con-boxed
+.e-con.e-parent.e-lazyloaded > div > div > div {
+    padding-top: 200px;
+}
+
+#wpcf7-f36-p8-o1 > form > h1 {
+    text-align: center;
+}
+
+#wpcf7-f36-p8-o1 > form > div.checkbox-container > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Animation pour le formulaire */
+
+/* Appliquer la vibration aux éléments principaux et aux traits */
+.vibrating-form {
+    position: relative;
+    animation: vibrate-pause 500ms infinite;
+  }
+  
+  /* Animation vibrante avec des pauses */
+  @keyframes vibrate-pause {
+    0%, 100% { transform: translate(0px, 0px); }
+    0%, 10% { opacity: 1; } /* Les traits sont invisibles au début et à la fin */
+    1%, 5% { opacity: 0; }  /* Les traits deviennent visibles lors de la vibration */
+    10% { opacity: 1; }      /* Les traits redeviennent invisibles après la vibration */
+  }
+  
+  /* Arcs dans le coin supérieur droit */
+  .vibrating-form::before {
+    content: '))';
+    position: absolute;
+    top: -95px;
+    right: -85px;
+    font-size: 50px;
+    color: black;
+    rotate: -35deg;
+}
+  
+  /* Arcs dans le coin inférieur gauche */
+  .vibrating-form::after {
+    content: '( (';
+    position: absolute;
+    bottom: -90px;
+    left: -80px;
+    font-size: 25px;
+    rotate: -40deg;
+    color: black;
+}
+  
+  /* arcs qui bougent de manière différente */
+  @keyframes arcMotion {
+    0% { transform: translate(0, 0) rotate(10deg); }
+    25% { transform: translate(-1px, 3px) rotate(-25deg); }
+    50% { transform: translate(3px, -3px) rotate(-15deg); }
+    75% { transform: translate(-3px, 3px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(10deg); }
+  }
+  
+
+/* Animation vibrante avec des pauses */
+@keyframes vibrate-pause {
+    0% { transform: translate(0px, 0px); } /* Pas de mouvement initial */
+    1% { transform: translate(2px, 2px) rotate(1deg); } /* Petit mouvement */
+    3% { transform: translate(-2px, -2px) rotate(-1deg); } /* Inversement */
+    5% { transform: translate(2px, -2px) rotate(1deg); } /* Encore un mouvement */
+    7% { transform: translate(-2px, 2px) rotate(-1deg); } /* Vibration de retour */
+    10% { transform: translate(0px, 0px); } /* Retour à la position initiale */
+    100% { transform: translate(0px, 0px); } /* Pause pendant le reste du cycle (3 secondes) */
+  }
+
+/* Ajout d'une classe pour cacher les arcs */
+.contact-form.hidden-arcs::before,
+.contact-form.hidden-arcs::after {
+  display: none; /* Masque les arcs quand la classe est ajoutée */
+}
+  .hidden {
+    display: none; /* Masque les éléments */
+  }
